@@ -24,80 +24,7 @@ header {
     font-family: Poppins;
     color: #fff;
     text-shadow: 2px 0 0 #005bc5, 0 2px 0 #005bc5, -2px 0 0 #005bc5, 0 -2px 0 #005bc5;
-    z-index: 1;
-}
-
-
-
-/* 
-ハンバーガーメニュー
- */
- 
-.hotdog {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5px;
-    background: #fff;
-}
-/* チェックボックスを非表示にする */
-.drawer_hidden {
-    display: none;
-}
-
-/* ハンバーガーアイコンの設置スペース */
-.drawer_open {
-    display: flex;
-    height: 60px;
-    width: 60px;
-    justify-content: right;
-    align-items: center;
-    position: relative;
-    z-index: 100;/* 重なり順を一番上にする */
-    cursor: pointer;
-
-}
-
-/* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-    content: '';
-    display: block;
-    height: 4px;
-    width: 28px;
-    border-radius: 3px;
-    background: #005bc5;
-    transition: 0.5s;
-    position: absolute;
-}
-
-/* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
-    bottom: 8px;
-}
-
-/* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-    top: 8px;
-}
-
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);
-}
-
-/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-}
-
-#drawer_input:checked ~ .drawer_open span::after {
-    top: 0;
-    transform: rotate(-45deg);
+    z-index: 100;
 }
 
 .cafe-search-parent {
@@ -112,28 +39,146 @@ header {
     justify-content: space-between;
 }
 
+
+/* 
+ハンバーガーメニュー
+ */
+ 
+.hotdog {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    background: #fff;
+    position: relative;
+}
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+}
+
+
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+
+}
+
+
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 28px;
+    border-radius: 3px;
+    background: #005bc5;
+    transition: 0.5s;
+    position: absolute;
+}
+
+
+.drawer_open span:before {
+    bottom: 8px;
+}
+
+
+.drawer_open span:after {
+    top: 8px;
+}
+
+
+#drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+
+#drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+
 /* メニューのデザイン*/
 .nav_content {
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 0;
-    left: 100%; /* メニューを画面の外に飛ばす */
+    bottom: 100%;
+    /* top: 0; */
+    left: 0%; 
     z-index: 99;
     background: #fff;
     transition: .5s;
     text-align: center;
+    padding-top: 60px;
   }
   
-  /* メニュー黒ポチを消す */
+
   .nav_list {
     list-style: none;
+    background-color: aliceblue;
+    padding: 20px;
+  }
+
+  .nav_item {
+    padding: 0;
+    margin: 1em;
+    font-size: 24px;
+    display: block;
+
   }
   
-  /* アイコンがクリックされたらメニューを表示 */
-  #drawer_input:checked ~ .nav_content {
-    left: 0;/* メニューを画面に入れる */
+  .nav_item > a {
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    margin: 10 0;
+    transition: color .4s ease;
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+}
+  .nav_item > a:hover {
+    color: #3D70FF;
   }
+
+  .nav_item > a::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -.15em;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3D70FF;
+    transition: width .4s ease;
+  }
+
+  .nav_item > a:hover::after {
+    width: 100%; 
+}
+
+  #drawer_input:checked ~ .nav_content {
+    bottom: 0;
+  }
+
+
+  
 
 
 .b {

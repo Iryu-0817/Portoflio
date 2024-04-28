@@ -31,9 +31,9 @@
                                 <!-- メニュー -->
                                 <nav class="nav_content">
                                 <ul class="nav_list">
-                                    <li class="nav_item"><a href="">メニュー1</a></li>
-                                    <li class="nav_item"><a href="">メニュー2</a></li>
-                                    <li class="nav_item"><a href="">メニュー3</a></li>
+                                    <li class="nav_item"><a href="">Home</a></li>
+                                    <li class="nav_item"><a href="">About Service</a></li>
+                                    <li class="nav_item"><a href="">Profile</a></li>
                                 </ul>
                                 </nav>
                             </div>
@@ -46,7 +46,8 @@
                         <div class="group-child"></div>
                         <b class="search"> Search</b>
                     </div>
-                    <div class="div">キーワード入力の場合はこちら</div>
+                    
+                    <a href="" class="div">キーワード入力の場合はこちら</a>
                     <div class="rectangle-group">
                         <div class="group-item">
                         </div>
