@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index() {
-        return view('cafe-search');
+    public function page1() {
+        return view('search.cafe-search');
+    }
+
+    public function page2() {
+        return view('search.cafe-search-2');
     }
 }
