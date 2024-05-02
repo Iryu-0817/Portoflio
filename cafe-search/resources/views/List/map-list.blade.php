@@ -13,9 +13,7 @@
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" />
             </head>
 
-            
-            <body>
-                <header>
+            <header>
                         <div class="cafe-search-parent">
                             <d class="cafe-search">Cafe Search</d>
 
@@ -38,9 +36,16 @@
                                 </nav>
                             </div>
                         </div>
-                </header>
+            </header>
+
+            <body>
+                
 
                 
+
+
+                <script src=""></script>
+                <script></script>
             </body>
 
             <footer>
