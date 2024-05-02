@@ -39,13 +39,13 @@
             </header>
 
             <body>
-                
+                <div id="map" style="height: auto; width:auto;"></div>
 
                 
 
 
-                <script src=""></script>
-                <script></script>
+                <script src="{{ asset('/js/map.js) }}"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWPKDhRX8k1kn24gVasffU0TSaiB9VsrQ&libraries=places&callback=initMap"></script>
             </body>
 
             <footer>
