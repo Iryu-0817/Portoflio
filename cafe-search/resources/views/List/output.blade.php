@@ -7,6 +7,7 @@
                 <title>Cafe Search</title>
                 <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
                 <link rel="stylesheet" href="{{ asset('css/top-page.css') }}">
+                <link rel="stylesheet" href="{{ asset ('css/output.css') }}">
 
 
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
@@ -74,7 +75,9 @@
                                     <span>カフェ・レストラン</span>
                                     <span>/</span>
                                     <span>Wi-Fiあり</span>
+                                    <span>/</span>
                                     <span>電源あり</span>
+                                    <span>/</span>
                                     <span>¥500~1500</span>
                                 </div>
                             </div>
