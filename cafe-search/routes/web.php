@@ -14,4 +14,4 @@ Route::get('/cafe-search-2', [\App\Http\Controllers\Search\IndexController::clas
 })->name('cafe-search-2');*/
 
 
-Route::get('/');   
+Route::get('/cafe-list', [\App\Http\Controllers\Search\IndexController::class, 'page3'])->name('output');   
