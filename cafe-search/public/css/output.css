@@ -1,7 +1,68 @@
 @charset "UTF-8";
 
-
-
-.cafe-information {
+body{
     font-family: "Noto-sans";
+}
+
+ .list-form {
+    font-size: 10px;
+    padding: 10px;
+ }
+
+ /* 
+ トグルボタン
+  */
+ .toggle-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+ }
+
+ .toggle  {
+    margin: 0 10px;
+    font-size: 13px;
+ }
+
+ .toggle-1 {
+    background-color: #d9d9d9;
+    height: 19px;
+ }
+ .toggle-1>p{
+    padding: 5px;
+ }
+
+ .toggle-2{
+
+ }
+/*
+ Toggle button 
+ */
+
+
+ /* 
+ 距離題名
+  */
+  .your-distance {
+    font-size: 20px;
+    margin: auto 20px;
+    font-weight: bold;
+    
+  }
+
+
+ /*
+  リストデザイン
+   */
+ .list-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .star {
+    margin-right: 10px;
+ }
+
+ .cafe-name>h2 {
+    font-size: 18px;
  }
