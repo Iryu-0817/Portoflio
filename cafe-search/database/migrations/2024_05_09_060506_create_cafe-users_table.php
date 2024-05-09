@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('cafe_users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->integer('age');
             $table->string('email')->unique();
-            $table->string('location');
-            $table->string('favorite_cafe');
+            $table->string('password');
+            $table->string('location_id')->nullable();
             $table->timestamps();
         });
     }
@@ -25,8 +24,9 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
+    
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('cafe_users');
     }
 };

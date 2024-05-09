@@ -44,8 +44,8 @@
 
             <!-- Toggle Button -->
                 <div class="toggle-button">
-                    <button type="button" class="btn btn-primary btn-sm">一覧表示</button>
-                    <button type="button" class="btn btn-secondary btn-sm">地図表示</button>
+                <button type="button" onclick="window.location.href='/cafe-list'" class="btn btn-primary btn-sm">一覧表示</button>
+                    <button type="button" onclick="window.location.href='/cafe-list/map'" class="btn btn-secondary btn-sm">地図表示</button>
                 </div>
                 <div class="your-distance">
                     <span>現在地から</span>
