@@ -42,7 +42,7 @@
 
                 <div class="iphone-14-15-pro-3">
                     <b class="b">近くのカフェを検索する</b>
-                    <a href="" class="rectangle-parent">
+                    <a href="javascript:void(0);" id="search-button" class="rectangle-parent">
                         <div class="group-child"></div>
                         <b class="search"> Search</b>
                     </a>
@@ -54,23 +54,20 @@
                     </div>
 
 
-                    
-                    <select name="-km" class="pull-down" required>
-                            <option style="display: none;" value="-km">-km</option>
-                            <option value="distance">1km</option>
-                            <option value="distance">2km</option>
-                            <option value="distance">3km</option>
-                            <option value="distance">4km</option>
-                            <option value="distance">5km</option>
-                            <option value="distance">6km</option>
-                            <option value="distance">7km</option>
-                            <option value="distance">8km</option>
-                            <option value="distance">9km</option>
-                            <option value="distance">10km</option>
-                    </select>
-
-    
+                    <form id="search-form" action="{{ route('cafe.search') }}" method="GET">
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                        <select name="radius" class="pull-down" required>
+                                <option style="display: none;" value="-km">-km</option>
+                                <option value="1">1km</option>
+                                <option value="2">2km</option>
+                                <option value="3">3km</option>
+                                <option value="4">4km</option>
+                                <option value="5">5km</option>
+                        </select>
+                    </form>
                 </div>
+                <script src="{{ asset('js/nowLocation.js') }}"></script>
             </body>
 
             <footer>

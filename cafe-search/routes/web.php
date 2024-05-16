@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CafeSearchController;
+use App\Models\CafeSearch;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,4 +17,7 @@ Route::get('/cafe-search-2', [\App\Http\Controllers\Search\IndexController::clas
 
 
 Route::get('/cafe-list', [\App\Http\Controllers\Search\IndexController::class, 'page3'])->name('output');   
-Route::get('/cafe-list/map', [\App\Http\Controllers\Search\IndexController::class, 'page4'])->name('map-list');   
+Route::get('/cafe-list',[CafeSearchController::class, 'getCafeInfo','openingHours'])->name('cafe.search');
+
+Route::get('/cafe-list/map', [\App\Http\Controllers\Search\IndexController::class, 'page4'])->name('map-list'); 
+  

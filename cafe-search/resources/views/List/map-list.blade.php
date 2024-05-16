@@ -11,7 +11,7 @@
                 <link rel="stylesheet" href="{{ asset ('css/output.css') }}">
 
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:weight@400&display=swap" />
+                <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:weight@400&display=swap" /> -->
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" />
             </head>
 
@@ -59,7 +59,10 @@
 
 
                 <script src="{{ asset('js/map.js') }}"></script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWPKDhRX8k1kn24gVasffU0TSaiB9VsrQ&libraries=places&callback=initMap" async defer></script>
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWPKDhRX8k1kn24gVasffU0TSaiB9VsrQ&callback=initMap&libraries=places&v=weekly"
+                    defer
+                ></script>
             </body>
 
             <footer>

@@ -42,16 +42,47 @@
 
             <body>
 
-            <!-- Toggle Button -->
-                <div class="toggle-button">
-                <button type="button" onclick="window.location.href='/cafe-list'" class="btn btn-primary btn-sm">一覧表示</button>
+            <div class="toggle-button">
+                    <button type="button" onclick="window.location.href='/cafe-list'" class="btn btn-primary btn-sm">一覧表示</button>
                     <button type="button" onclick="window.location.href='/cafe-list/map'" class="btn btn-secondary btn-sm">地図表示</button>
-                </div>
-                <div class="your-distance">
+            </div>
+                   
+            <div class="your-distance">
                     <span>現在地から</span>
                     <span>〇〇km</span>
                     <span>圏内のカフェ</span>
-                </div>
+            </div>
+                
+            @foreach ($cafes as $cafe)
+                <ul>
+
+                        評価: {{ $cafe['rating'] }}<br>
+                        価格レベル: {{ isset($cafe['priceLevel']) ? $cafe['priceLevel'] : '未定義' }}<br>
+
+                        
+                        テイクアウト可否: {{ isset($cafe['takeout']) ? ($cafe['takeout'] ? '可' : '不可') : '未定義' }}<br>
+
+                        @if(isset($cafe['websiteUri']))
+                           ウェブサイト: <a href="{{ $cafe['websiteUri'] }}" target="_blank">{{ $cafe['websiteUri'] }}</a>
+                        @endif
+
+                        @foreach($cafe['photos'] as $photo)
+                        @php
+                            $apiKey = env('GOOGLE_PLACES_API_KEY');
+                            $photoReference = basename(parse_url($photo['name'], PHP_URL_PATH));
+                            $photoUrl = "https://maps.googleapis.com/maps/api/place/photo?maxheight=86&maxwidth=80&photoreference=$photoReference&key=$apiKey";
+                        @endphp
+                        <img src="{{ $photoUrl }}" alt="Cafe Photo">
+                    @endforeach
+                    </li>
+                </ul>
+            @endforeach
+    
+
+
+            <!-- Toggle Button -->
+               
+           
 
             
                 <div class="list-form">

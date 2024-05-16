@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Search;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use APP\Models\CafeSearch;
 
 class IndexController extends Controller
 {
@@ -20,6 +21,9 @@ class IndexController extends Controller
     }
 
     public function page4() {
+
         return view('List.map-list');
     }
+
+
 }

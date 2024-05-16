@@ -67,11 +67,6 @@
                             <option value="distance">3km</option>
                             <option value="distance">4km</option>
                             <option value="distance">5km</option>
-                            <option value="distance">6km</option>
-                            <option value="distance">7km</option>
-                            <option value="distance">8km</option>
-                            <option value="distance">9km</option>
-                            <option value="distance">10km</option>
                     </select>
 
                     <form  id="form1" action="自分のサイトURL">
