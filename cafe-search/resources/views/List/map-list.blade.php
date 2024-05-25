@@ -42,7 +42,7 @@
 
             <body>
                 <div class="toggle-button">
-                    <button type="button" onclick="window.location.href='/cafe-list'" class="btn btn-primary btn-sm">一覧表示</button>
+                    <button href="javascript:void(0);" id="search-button" type="button" onclick="window.location.href='/cafe-list'" class="btn btn-primary btn-sm">一覧表示</button>
                     <button type="button" onclick="window.location.href='/cafe-list/map'" class="btn btn-secondary btn-sm">地図表示</button>
                 </div>
 

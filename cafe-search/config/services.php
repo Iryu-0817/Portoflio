@@ -33,7 +33,11 @@ return [
     
     'google' => [
         'places_api_key' => env('GOOGLE_PLACES_API_KEY'),
+        'client_id' => env('GOOGLE_KEY'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_REDIRECT'),
     ],
+    
     
 
 ];

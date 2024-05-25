@@ -26,7 +26,7 @@ class CafeSearchController extends Controller
             'X-Goog-FieldMask' => 'places.id,places.displayName,places.formattedAddress,places.types,places.nationalPhoneNumber,places.rating,places.priceLevel,places.regularOpeningHours,places.takeout,places.websiteUri,places.photos'
         ])->post('https://places.googleapis.com/v1/places:searchNearby', [
             'includedTypes' => ['cafe'],
-            'maxResultCount' => 12,
+            'maxResultCount' => 20,
             'rankPreference' => 'POPULARITY',
             'locationRestriction' => [
                 'circle' => [
@@ -40,12 +40,19 @@ class CafeSearchController extends Controller
         ]);
 
 
+        Log::info('API Response: ', ['response' => $response->json()]);
 
+        if ($response->successful()) {
+            $cafes = $response->json()['places'] ?? [];
+            $cafes = array_filter($cafes, function($place) {
+                return in_array('cafe', $place['types']);
+            });
 
-
-        $cafes = $response->json()['places'] ?? [];
-        return view('List.output', ['cafes' => $cafes]);
-        Log::info('API Response: ' . print_r($response->json(), true));
+            return view('List.output', ['cafes' => $cafes]);
+        } else {
+            Log::error('API Request failed', ['response' => $response->body()]);
+            return view('List.output', ['cafes' => []]);
+        }
     }
 
     

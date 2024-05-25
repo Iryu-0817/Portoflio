@@ -25,5 +25,14 @@ class IndexController extends Controller
         return view('List.map-list');
     }
 
+    public function loginForm() {
+        return view('Login.log-in');
+        
+    }
+
+    public function registerForm() {
+        return view('Login.register');
+    }
+
 
 }

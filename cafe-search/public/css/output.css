@@ -59,10 +59,20 @@ body{
 
  .star {
     margin-right: 10px;
+    display: flex;
+    white-space: nowrap; 
+ }
+
+ .rating {
+   margin-right: 5px;
+   margin-top: 1px;
+   font-size: 12px;
+   /* font-weight: bold; */
  }
 
  .cafe-name>h2 {
-    font-size: 18px;
+    font-size: 15px;
+
  }
 
  .cafe-information {
@@ -77,6 +87,7 @@ body{
     text-decoration: none;
     color: black;
     margin-left: 90px;
+    white-space: nowrap;
  }
 
  /*
@@ -84,6 +95,7 @@ body{
   */
  .cafe-images {
     display: flex;
+    overflow-x: scroll;
     margin-top: 15px;
     justify-content: space-between;
     gap: 7px;
